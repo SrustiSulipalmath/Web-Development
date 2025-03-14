@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing Mode Examples</title>
+  <style>
+    body {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      font-size: 22px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 2px solid black;
+      width: 200px;
+    }
+
+    /* 1. Subway Sign (Left-to-Right Vertical) */
+    .subway {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      background-color: black;
+      color: white;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    /* 2. Japanese Book (Right-to-Left Vertical) */
+    .japanese {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: lightyellow;
+      padding: 15px;
+    }
+
+    /* 3. Newspaper Layout (Right-to-Left Vertical but mixed text orientation) */
+    .newspaper {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-family: serif;
+      background-color: lightgray;
+      padding: 15px;
+    }
+
+    /* 4. Normal Horizontal Text */
+    .horizontal {
+      writing-mode: horizontal-tb;
+      background-color: lightblue;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="subway">SUBWAY</div>
+    <p>🚇 Subway Sign (vertical-lr, upright)</p>
+  </div>
+
+  <div class="container">
+    <div class="japanese">本日はお元気ですか</div>
+    <p>📖 Japanese Book (vertical-rl, upright)</p>
+  </div>
+
+  <div class="container">
+    <div class="newspaper">This is a vertical newspaper layout.</div>
+    <p>📰 Newspaper Column (vertical-rl, mixed)</p>
+  </div>
+
+  <div class="container">
+    <div class="horizontal">Standard Horizontal Text</div>
+    <p>🔤 Normal Text (horizontal-tb)</p>
+  </div>
+
+</body>
+</html>
