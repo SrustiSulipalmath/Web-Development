@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Styled unordered list */
+        ul {
+            list-style-type: square; /* Custom bullet points */
+            list-style-position: inside; /* Keeps bullets inside */
+            padding: 0;
+        }
+
+        /* Styled ordered list */
+        ol {
+            list-style-type: upper-roman; /* Uses Roman numerals */
+            padding-left: 20px;
+        }
+
+        /* Styling list items */
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Input field for adding tasks */
+        input {
+            padding: 10px;
+            width: 60%;
+            margin-bottom: 10px;
+        }
+
+        /* Add Task Button */
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>My To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+
+    <h3>Unordered List (Tasks)</h3>
+    <ul id="taskList">
+        <li>Buy groceries</li>
+        <li>Complete project</li>
+    </ul>
+
+    <h3>Ordered List (Priorities)</h3>
+    <ol>
+        <li>Finish homework</li>
+        <li>Prepare for presentation</li>
+    </ol>
+
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskList = document.getElementById("taskList");
+
+            if (taskInput.value.trim() !== "") {
+                let li = document.createElement("li");
+                li.textContent = taskInput.value;
+                taskList.appendChild(li);
+                taskInput.value = ""; // Clear input field
+            }
+        }
+    </script>
+</body>
+</html>

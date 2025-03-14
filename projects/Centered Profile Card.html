@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card with Dark Mode</title>
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            transition: background 0.3s;
+        }
+        
+        .profile-card {
+            width: 320px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .profile-card img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .profile-card h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        
+        .profile-card p {
+            font-size: 1em;
+            color: #777;
+            margin: 10px 0;
+        }
+        
+        /* List Styling */
+        .profile-info {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .profile-info li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .profile-info li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Button Styling */
+        .follow-btn {
+            padding: 10px 15px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .follow-btn:hover {
+            background: darkblue;
+        }
+        
+        /* Dark Mode Styling */
+        .dark-mode body {
+            background: #222;
+        }
+        .dark-mode .profile-card {
+            background: #333;
+            color: white;
+        }
+        .dark-mode .profile-card h2 {
+            color: white;
+        }
+        .dark-mode .profile-card p {
+            color: #ddd;
+        }
+        .dark-mode .follow-btn {
+            background: orange;
+        }
+        .dark-mode .follow-btn:hover {
+            background: darkorange;
+        }
+        
+        /* Dark Mode Toggle Button */
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 12px;
+            cursor: pointer;
+            background: gray;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .toggle-btn:hover {
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    
+    <div class="profile-card">
+        <img src="https://via.placeholder.com/100" alt="User">
+        <h2>John Doe</h2>
+        <p>Web Developer</p>
+        
+        <ul class="profile-info">
+            <li>📍 Location: New York, USA</li>
+            <li>📧 Email: john.doe@example.com</li>
+            <li>📅 Joined: January 2023</li>
+        </ul>
+        
+        <button class="follow-btn">Follow</button>
+    </div>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

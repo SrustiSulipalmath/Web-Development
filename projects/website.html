@@ -1,0 +1,220 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish List with Icons</title>
+    <style>
+        /* 🔹 Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* 🔹 Custom List Styles */
+        ul.nav-menu {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        ul.nav-menu li {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background: #ff6f61;
+            color: white;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        ul.nav-menu li:hover {
+            background: #ff4500;
+            transform: scale(1.05);
+        }
+
+        /* 🔹 Custom Icons */
+        ul.nav-menu li::before {
+            content: "";
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+
+        ul.nav-menu li:nth-child(1)::before { 
+            background-image: url('https://cdn-icons-png.flaticon.com/128/25/25694.png'); 
+        }
+
+        ul.nav-menu li:nth-child(2)::before { 
+            background-image: url('https://cdn-icons-png.flaticon.com/128/1828/1828884.png'); 
+        }
+
+        ul.nav-menu li:nth-child(3)::before { 
+            background-image: url('https://cdn-icons-png.flaticon.com/128/271/271228.png'); 
+        }
+        
+        ul.nav-menu li:nth-child(4)::before { 
+            background-image: url('https://cdn-icons-png.flaticon.com/128/535/535239.png'); 
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🚀 Stylish Navigation Menu</h2>
+    
+    <ul class="nav-menu">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Portfolio</li>
+        <li>Contact</li>
+    </ul>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Navigation Menu</title>
+    <style>
+        /* 🔹 Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+            transition: background 0.3s ease-in-out;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* 🔹 Dark Mode Styles */
+        body.dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        /* 🔹 Custom List Styles */
+        ul.nav-menu {
+            list-style: none;
+            padding: 0;
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        /* Dark mode effect */
+        body.dark-mode ul.nav-menu {
+            background: #333;
+        }
+
+        ul.nav-menu li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background: #ff6f61;
+            color: white;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        /* 🔹 Hover Animation */
+        ul.nav-menu li:hover {
+            background: #ff4500;
+            transform: scale(1.05);
+        }
+
+        /* 🔹 Active State */
+        ul.nav-menu li.active {
+            background: #007bff !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 255, 0.3);
+        }
+
+        /* 🔹 Custom Icons */
+        ul.nav-menu li::before {
+            content: "";
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+
+        ul.nav-menu li:nth-child(1)::before { background-image: url('https://cdn-icons-png.flaticon.com/128/25/25694.png'); }
+        ul.nav-menu li:nth-child(2)::before { background-image: url('https://cdn-icons-png.flaticon.com/128/1828/1828884.png'); }
+        ul.nav-menu li:nth-child(3)::before { background-image: url('https://cdn-icons-png.flaticon.com/128/271/271228.png'); }
+        ul.nav-menu li:nth-child(4)::before { background-image: url('https://cdn-icons-png.flaticon.com/128/535/535239.png'); }
+
+        /* 🔹 Dark Mode Button */
+        button#toggle-mode {
+            padding: 10px 15px;
+            margin-top: 20px;
+            border: none;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button#toggle-mode:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🚀 Animated Navigation Menu</h2>
+    
+    <ul class="nav-menu">
+        <li onclick="setActive(this)">Home</li>
+        <li onclick="setActive(this)">Services</li>
+        <li onclick="setActive(this)">Portfolio</li>
+        <li onclick="setActive(this)">Contact</li>
+    </ul>
+
+    <button id="toggle-mode" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
+    <script>
+        // Function to set active menu item
+        function setActive(element) {
+            let items = document.querySelectorAll('.nav-menu li');
+            items.forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>

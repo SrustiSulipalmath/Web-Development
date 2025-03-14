@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card with Borders</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        /* Profile Card Styling */
+        .profile-card {
+            width: 300px;
+            background: white;
+            border: 5px solid #3498db; /* Solid border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        /* Profile Image Styling */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Circular Image */
+            border: 4px dashed #2ecc71; /* Dashed Border */
+        }
+
+        /* Profile Name */
+        .profile-name {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        /* Profile Description */
+        .profile-desc {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Hover Effect */
+        .profile-card:hover {
+            border-color: #e74c3c; /* Changes border color */
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Profile Image" class="profile-img">
+        <h2 class="profile-name">John Doe</h2>
+        <p class="profile-desc">Web Developer & Designer</p>
+    </div>
+
+</body>
+</html>

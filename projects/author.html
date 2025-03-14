@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        /* Blog container */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Blog Title */
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            text-align: justify;
+            text-indent: 50px;
+            line-height: 1.6;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Highlight first letter */
+        .blog-content::first-letter {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        /* Author Section */
+        .author {
+            text-align: right;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Comment Section */
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Button */
+        .dark-mode-toggle {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Dark mode button hover effect */
+        .dark-mode-toggle:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to My Blog</h1>
+
+        <p class="author">By John Doe | March 14, 2025</p>
+
+        <p class="blog-content">
+            The power of good writing can shape the world. Whether it's a blog post, a novel, or a news article, words have the ability to influence, educate, and inspire. The right typography, spacing, and alignment can improve readability and user experience.
+        </p>
+
+        <p class="blog-content">
+            In this blog, we explore the importance of text styling. Proper indentation, spacing, and contrast make reading effortless. Dark mode enhances visibility in low-light conditions, reducing eye strain.
+        </p>
+
+        <h2>Leave a Comment:</h2>
+        <textarea class="comment-box" placeholder="Write your thoughts..."></textarea>
+
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>

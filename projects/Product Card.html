@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card - CSS Colors</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: white; /* Card background */
+            border: 2px solid #ddd; /* Light gray border */
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Product Image */
+        .product-card img {
+            width: 100%;
+            border-bottom: 2px solid #ddd;
+        }
+
+        /* Product Name */
+        .product-card h2 {
+            color: #333; /* Dark text */
+        }
+
+        /* Price */
+        .price {
+            color: #28a745; /* Green price */
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Button Styles */
+        .buy-button {
+            background-color: #007bff; /* Blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover Effect */
+        .buy-button:hover {
+            background-color: #0056b3; /* Darker blue */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Product Card -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/300" alt="Product Image">
+        <h2>Smartphone X</h2>
+        <p class="price">$499</p>
+        <p>Latest model with high-speed performance and stunning display.</p>
+        <button class="buy-button">Buy Now</button>
+    </div>
+
+</body>
+</html>

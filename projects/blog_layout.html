@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - CSS Text Styling</title>
+    <style>
+        /* 🔹 General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif; /* Sets the default font */
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* 🔹 Blog Title Styling */
+        h1 {
+            text-align: center; /* Centers the title */
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        /* 🔹 Blog Subtitle Styling */
+        h2 {
+            text-align: center; 
+            font-size: 1.5em;
+            color: #555;
+            text-decoration: underline; /* Underlines subtitle */
+        }
+
+        /* 🔹 Blog Content Container */
+        .blog-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1); /* Soft shadow */
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* 🔹 Text Alignment */
+        .text-left { text-align: left; }  /* Align text to the left */
+        .text-right { text-align: right; } /* Align text to the right */
+        .text-center { text-align: center; } /* Center-align text */
+        .text-justify { text-align: justify; } /* Justifies text */
+
+        /* 🔹 First Paragraph Indentation */
+        .blog-content p:first-of-type {
+            text-indent: 50px; /* Indents only the first paragraph */
+        }
+
+        /* 🔹 Line Spacing for Readability */
+        .blog-content p {
+            line-height: 1.8; /* Increases spacing between lines */
+        }
+
+        /* 🔹 Letter Spacing & Word Spacing */
+        .letter-spacing {
+            letter-spacing: 2px; /* Adds space between letters */
+        }
+        
+        .word-spacing {
+            word-spacing: 8px; /* Adds space between words */
+        }
+
+        /* 🔹 Right-to-Left (RTL) Text for Multilingual Support */
+        .rtl-content {
+            direction: rtl; /* Right-to-left direction */
+            unicode-bidi: bidi-override; /* Ensures proper display */
+            background: #e8e8e8;
+            padding: 10px;
+            border-left: 5px solid #555;
+        }
+
+        /* 🔹 Styling Links */
+        a {
+            text-decoration: none; /* Removes default underline */
+            color: #0077cc;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underlines on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Blog Title -->
+    <h1>Welcome to My Blog</h1>
+    <h2 class="text-center">Exploring CSS Text Styling</h2>
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+        <p class="text-justify">
+            Typography plays a crucial role in web design. It determines readability, visual appeal, and how users perceive your content.
+            In this blog, we explore different ways to style text using CSS, including alignment, spacing, and text decorations.
+        </p>
+
+        <p class="text-left letter-spacing">
+            CSS provides various properties to control how text appears. By adjusting alignment, line height, and spacing, 
+            you can make your content visually appealing and easier to read.
+        </p>
+
+        <p class="text-right word-spacing">
+            Word spacing can improve readability, especially for long paragraphs. A well-spaced text ensures a smoother reading experience.
+        </p>
+
+        <p class="text-center">
+            Centered text is useful for titles, captions, and important information that needs to stand out.
+        </p>
+
+        <!-- Multilingual Content (RTL Text Example) -->
+        <div class="rtl-content">
+            هذا مثال على النص المكتوب من اليمين إلى اليسار لتوضيح كيفية التعامل مع اللغات المختلفة في صفحات الويب.
+        </div>
+
+        <p class="text-justify">
+            Learn more about **CSS typography** and best practices by visiting 
+            <a href="#">CSS Typography Guide</a>.
+        </p>
+    </div>
+
+</body>
+</html>
